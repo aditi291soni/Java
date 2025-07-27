@@ -3,15 +3,28 @@ public class Main{
      public static void main(String[] args){
        Scanner in=new Scanner(System.in);
        System.out.println("Enter number");
-       int n =in.nextInt(); //no of didgit
+       int num1 =in.nextInt(); //no of didgit
+            System.out.println("Enter  Second number");
+       int num2 =in.nextInt(); //no of didgit
+        System.out.println("Enter Operator");
+       char op =in.next().trim().charAt(0);
     // int n=321;
-       int total=0;
-     while(n>0){
-        int rem=n%10;
-        n=n/10;
-        total=total*10+rem;
-     }
-     System.out.println("Reverse of no is "+total);
+       float total=0;
+    if(op=='+'){
+total=num1 +num2;
+    }
+    else if(op=='-'){
+     total=num1 -num2;   
+    }
+    else if(op=='*'){
+      total=num1 *num2;  
+    }
+    else if(op=='/'){
+       total=num1 /num2; 
+    }else{
+       System.out.println("Operator not found"); 
+    }
+     System.out.println(total);
      
      }
 }
