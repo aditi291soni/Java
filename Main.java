@@ -10,21 +10,21 @@ public class Main{
        char op =in.next().trim().charAt(0);
     // int n=321;
        float total=0;
-    if(op=='+'){
-total=num1 +num2;
+    switch(op){
+        case '+':
+            total=num1+num2;
+            break;
+        case '-':
+            total=num1-num2;
+            break;
+        case '*':
+            total=num1*num2;
+            break;
+        case '/':
+            total=num1/num2;
+            break;
+        default:
+        System.out.println("Please enter valid operator");
     }
-    else if(op=='-'){
-     total=num1 -num2;   
-    }
-    else if(op=='*'){
-      total=num1 *num2;  
-    }
-    else if(op=='/'){
-       total=num1 /num2; 
-    }else{
-       System.out.println("Operator not found"); 
-    }
-     System.out.println(total);
-     
-     }
-}
+    System.out.println(total);
+}}
