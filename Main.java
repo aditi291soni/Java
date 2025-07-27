@@ -6,25 +6,15 @@ public class Main{
        int num1 =in.nextInt(); //no of didgit
             System.out.println("Enter  Second number");
        int num2 =in.nextInt(); //no of didgit
-        System.out.println("Enter Operator");
-       char op =in.next().trim().charAt(0);
-    // int n=321;
-       float total=0;
-    switch(op){
-        case '+':
-            total=num1+num2;
-            break;
-        case '-':
-            total=num1-num2;
-            break;
-        case '*':
-            total=num1*num2;
-            break;
-        case '/':
-            total=num1/num2;
-            break;
-        default:
-        System.out.println("Please enter valid operator");
-    }
-    System.out.println(total);
-}}
+     swap(num1,num2);
+   
+
+    // System.out.println(swap);
+}
+static void swap(int num1,int num2){
+    int temp=num2;
+   num2=num1;
+   num1=temp;
+System.out.println(num1 + " " + num2);
+}
+}
